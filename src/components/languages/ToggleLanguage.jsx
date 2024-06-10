@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import "./language.css"
+import { MdLanguage } from "react-icons/md";
+
 
 const ToggleLanguage = () => {
     const { _, i18n } = useTranslation();
@@ -20,7 +22,10 @@ const ToggleLanguage = () => {
 
     return (
         <div className='languages'>
-            <button onClick={toggleLanguage}>{lang}</button>
+            <button onClick={toggleLanguage}>
+                <MdLanguage />
+                {lang}
+            </button>
         </div>
     );
 };
