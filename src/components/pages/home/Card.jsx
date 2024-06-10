@@ -3,9 +3,12 @@ import { CiCirclePlus, CiCircleMinus } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 import "./css/Card.css"
 import { LuBadgeDollarSign } from "react-icons/lu";
-
+import { useTranslation } from 'react-i18next';
 
 function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
+
+    const [t, _] = useTranslation()
+
     const handleRemove = (idx) => {
         removeFromCard(idx);
     };
@@ -36,7 +39,7 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
 
     return (
         <div className="card">
-            <h2 className="cart-title"> Cart </h2>
+            <h2 className="cart-title"> {t("Cart")} </h2>
             <div className='flexing'>
                 {
                     selectedBoxes.map((box, index) => (
