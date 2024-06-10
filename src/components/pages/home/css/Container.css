@@ -14,3 +14,11 @@
     flex-direction: row;
     gap: 40px;
 }
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

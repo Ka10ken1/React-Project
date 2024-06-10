@@ -2,11 +2,9 @@
     border-radius: 5px;
     border: 2px solid #ccc;
     font-size: 16px;
-    width: 800px;
+    width: 850px;
     height: 40px;
     padding: 10px;
-    margin: 20px auto;
-    margin-left: 200px;
     display: block;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: border-color 0.3s, box-shadow 0.3s;
