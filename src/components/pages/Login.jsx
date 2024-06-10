@@ -37,7 +37,8 @@ function LoginForm() {
         setError('');
 
         try {
-            const { user, error } = await supabase.auth.signIn({
+
+            const { user, error } = await supabase.auth.signInWithOtp({
                 email,
                 password,
             });
@@ -48,6 +49,8 @@ function LoginForm() {
                 alert('User signed in:', user);
             }
         } catch (error) {
+            console.log(supabase); // Check the structure of the supabase object
+
             setError(error.message);
         } finally {
             setLoading(false);
