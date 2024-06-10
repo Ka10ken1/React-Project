@@ -1,0 +1,22 @@
+.filter {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+}
+
+.filter:hover,
+.filter:focus {
+    border-color: #666;
+}
+
+.filter option {
+    background-color: #fff;
+    color: #333;
+}

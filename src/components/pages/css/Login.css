@@ -1,0 +1,60 @@
+.sign {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 150px;
+}
+
+.input {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input label {
+    display: block;
+    margin-bottom: 5px
+}
+
+.input input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc
+}
+
+.sign-but {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 2px 25px;
+    display: inline-block;
+    margin-left: 320px;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+.sign-up:hover {
+    background-color: #0056b3;
+    font-size: 16px;
+}
