@@ -1,6 +1,7 @@
 import React from "react";
 import Slideshow from "./home/Slideshow";
 import "./css/Home.css";
+import { Link } from "react-router-dom";
 
 function Home() {
     return (
@@ -8,7 +9,7 @@ function Home() {
             <div className="welcome-container">
                 <h1>Welcome to Our Hotel</h1>
                 <p>Experience luxury, comfort, and impeccable service.</p>
-                <button className="btn">Book Now</button>
+                <button className="btn"><Link to="/book">Book Now</Link></button>
                 <div className="info">
                     <div>
                         <i className="fas fa-map-marker-alt"></i>

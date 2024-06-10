@@ -49,8 +49,6 @@ function LoginForm() {
                 alert('User signed in:', user);
             }
         } catch (error) {
-            console.log(supabase); // Check the structure of the supabase object
-
             setError(error.message);
         } finally {
             setLoading(false);

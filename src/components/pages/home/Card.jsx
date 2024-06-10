@@ -52,7 +52,7 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
                             <div className='buttons'>
                                 <button onClick={() => handleRemove(index)}>Remove</button>
                                 <button>
-                                    <Link to="/login" className='list-style'>Book now</Link>
+                                    <Link to="/login" className='list-style'>Book</Link>
                                 </button>
                             </div>
                         </div>
