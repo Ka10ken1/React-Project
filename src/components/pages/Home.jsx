@@ -44,26 +44,30 @@ function Home() {
                     <p>Pamper yourself with rejuvenating spa treatments.</p>
                 </div>
             </div>
-            <div className="testimonial">
-                <h2>Testimonials</h2>
-                <div className="quote">
-                    <p>"The best hotel experience I've ever had. Amazing service and attention to detail."</p>
-                    <p>- John Doe</p>
+            <div className="footer">
+                <div className="testimonial">
+                    <h2>Testimonials</h2>
+                    <div className="quote">
+                        <p>"The best hotel experience I've ever had. Amazing service and attention to detail."</p>
+                        <p>- John Doe</p>
+                    </div>
+                    <div className="quote">
+                        <p>"Highly recommend this hotel to anyone looking for a luxurious getaway."</p>
+                        <p>- Jane Smith</p>
+                    </div>
                 </div>
-                <div className="quote">
-                    <p>"Highly recommend this hotel to anyone looking for a luxurious getaway."</p>
-                    <p>- Jane Smith</p>
-                </div>
-            </div>
-            <div className="comments">
-                <h2>Comments</h2>
-                <div className="comment">
-                    <p>"Great experience! The staff was friendly and helpful."</p>
-                    <p>- Mary Johnson</p>
-                </div>
-                <div className="comment">
-                    <p>"Beautiful hotel with stunning views. Would definitely stay here again!"</p>
-                    <p>- David Lee</p>
+                <div className="celebrity-visits">
+                    <h2>Honorary Celebrity Visits</h2>
+                    <div className="visit">
+                        <img src="/celebrity1.jpg" alt="Celebrity 1" className="celebrity-image" />
+                        <p>"Had an amazing time at this hotel! The hospitality was top-notch."</p>
+                        <p>Honny Deph</p>
+                    </div>
+                    <div className="visit">
+                        <img src="/celebrity2.jpg" alt="Celebrity 2" className="celebrity-image" />
+                        <p>"A beautiful place to relax and unwind. Highly recommend!"</p>
+                        <p>- Celebrity Name 2</p>
+                    </div>
                 </div>
             </div>
         </div>
