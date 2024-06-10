@@ -1,38 +1,16 @@
-.container-wrapper {
-    margin: 20px;
-}
-
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 10px;
-    padding: 20px;
-    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
 }
 
-.controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+
+.box-container {
     display: flex;
     flex-direction: row;
-    margin-left: 30px;
-}
-
-.box {
-    background-color: #f8f8f8;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.box:hover {
-    transform: scale(1.05);
-}
-
-.box img {
-    max-width: 100%;
-    border-radius: 5px;
+    gap: 40px;
 }

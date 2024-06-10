@@ -1,9 +1,19 @@
 .search {
     border-radius: 5px;
-    border-style: solid;
-    font-size: 15px;
-    width: 400px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    width: 800px;
     height: 40px;
-    margin-top: 20px;
-    margin-left: 1250px;
+    padding: 10px;
+    margin: 20px auto;
+    margin-left: 200px;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+    outline: none;
 }

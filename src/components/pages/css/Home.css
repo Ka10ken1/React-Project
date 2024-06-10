@@ -2,19 +2,11 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
-    align-items: center;
-    justify-content: center;
 }
 
 .welcome-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
-    z-index: 1;
+    padding: 50px 0;
 }
 
 .welcome-container h1 {
@@ -30,7 +22,6 @@
 .btn {
     background-color: #4CAF50;
     border: none;
-    border-radius: 5px;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -39,7 +30,6 @@
     font-size: 16px;
     margin-bottom: 2rem;
     cursor: pointer;
-
 }
 
 .btn:hover {
@@ -50,6 +40,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .info div {
@@ -65,10 +56,221 @@
 }
 
 .info div p {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
-.slideshow-container {
+.features {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature {
+    margin-bottom: 2rem;
+}
+
+.feature i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.testimonial h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.quote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.quote p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quote p:last-child {
+    font-style: italic;
+}
+
+
+.comments {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.comments h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.comment p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.comment p:last-child {
+    font-style: italic;
+    color: #888;
+}
+
+
+.home {
     position: relative;
-    z-index: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.welcome-container h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-container p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.info div {
+    margin: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info div i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.info div p {
+    font-size: 1rem;
+}
+
+.features {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature {
+    margin-bottom: 2rem;
+}
+
+.feature i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.testimonial h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.quote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.quote p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quote p:last-child {
+    font-style: italic;
+}
+
+
+.comments {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.comments h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.comment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.comment p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.comment p:last-child {
+    font-style: italic;
+    color: #888;
 }

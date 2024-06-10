@@ -1,10 +1,11 @@
 .box {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 20px;
     align-items: center;
     justify-content: center;
     height: 300px;
-    width: 300px;
+    width: 800px;
     border: 2px solid #333;
     border-radius: 10px;
     padding: 10px;
@@ -13,8 +14,8 @@
 }
 
 .box img {
-    height: 60%;
-    width: 70%;
+    height: 50%;
+    width: 50%;
     border-radius: 5px;
     object-fit: cover;
     margin-bottom: 10px;

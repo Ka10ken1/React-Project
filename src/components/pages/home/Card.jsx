@@ -45,18 +45,20 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
                     selectedBoxes.map((box, index) => (
                         <div key={index} className="box">
                             <img src={box.url} alt={box.name} />
-                            <h3>{box.name}</h3>
-                            <p>Night Count: {box.nightCount}</p>
-                            <div className='controls'>
-                                <button onClick={() => handleDecrementDays(index)}><CiCircleMinus /></button>
-                                <p>Price:<LuBadgeDollarSign />{selectedBoxes[index].totalPrice}</p>
-                                <button onClick={() => handleIncrementDays(index)}><CiCirclePlus /></button>
-                            </div>
-                            <div className='buttons'>
-                                <button onClick={() => handleRemove(index)}>Remove</button>
-                                <button>
-                                    <Link to="/login" className='list-style'>Book</Link>
-                                </button>
+                            <div>
+                                <h3>{box.name}</h3>
+                                <p>Night Count: {box.nightCount}</p>
+                                <div className='controls'>
+                                    <button onClick={() => handleDecrementDays(index)}><CiCircleMinus /></button>
+                                    <p>Price:<LuBadgeDollarSign />{selectedBoxes[index].totalPrice}</p>
+                                    <button onClick={() => handleIncrementDays(index)}><CiCirclePlus /></button>
+                                </div>
+                                <div className='buttons'>
+                                    <button onClick={() => handleRemove(index)}>Remove</button>
+                                    <button>
+                                        <Link to="/login" className='list-style'>Book</Link>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     ))
