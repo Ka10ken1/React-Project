@@ -9,7 +9,7 @@ function Home() {
             <div className="welcome-container">
                 <h1>Welcome to Our Hotel</h1>
                 <p>Experience luxury, comfort, and impeccable service.</p>
-                <button className="btn"><Link to="/book">Book Now</Link></button>
+                <Link className="btn" to="/booking">Book Now</Link>
                 <div className="info">
                     <div>
                         <i className="fas fa-map-marker-alt"></i>
