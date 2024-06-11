@@ -5,12 +5,13 @@ import { useTranslation } from "react-i18next";
 import { FaSearch } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineLogin } from "react-icons/md";
+import { CiLogout } from "react-icons/ci";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 
 
 function Layout() {
 
-    const { login } = useKindeAuth();
+    const { login, isAuthenticated, logout } = useKindeAuth();
 
     const [t, _] = useTranslation();
 
@@ -30,15 +31,30 @@ function Layout() {
                     </Link>
                 </li>
                 <li>
-                    <button onClick={login} className="link">
-                        <MdOutlineLogin />
-                        {t("Login")}
-                    </button>
+
+                    {
+                        isAuthenticated ? (
+
+                            <button onClick={logout} className="link">
+                                <CiLogout />
+                                {t("Logout")}
+                            </button>
+
+
+                        ) : (
+                            <button onClick={login} className="link">
+                                <MdOutlineLogin />
+                                {t("Login")}
+                            </button>
+
+                        )
+                    }
+
                 </li>
                 <li>
                     <ToggleLanguage />
                 </li>
-            </ul>
+            </ul >
             <Outlet />
         </>
     );

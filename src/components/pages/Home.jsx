@@ -2,6 +2,7 @@ import React from "react";
 import Slideshow from "./home/Slideshow";
 import "./css/Home.css";
 import { Link } from "react-router-dom";
+import UserProfile from "./UserProfile";
 
 function Home() {
     return (
@@ -69,6 +70,8 @@ function Home() {
                         <p>- Celebrity Name 2</p>
                     </div>
                 </div>
+
+                <UserProfile />
             </div>
 
         </div>

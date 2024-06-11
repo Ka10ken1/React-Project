@@ -5,6 +5,7 @@ import SearchInput from "./Search";
 import Filter from "./Filter";
 import "./css/Container.css";
 import HotelData from "./data/images";
+import UserProfile from "../UserProfile";
 
 
 const images = HotelData;
@@ -74,6 +75,8 @@ function Container() {
                     ))}
                 </div>
             </div>
+
+            <UserProfile />
         </div>
     );
 }

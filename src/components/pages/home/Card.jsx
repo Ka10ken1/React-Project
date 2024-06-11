@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import { CiCirclePlus, CiCircleMinus } from 'react-icons/ci';
-import { Link } from 'react-router-dom';
 import "./css/Card.css"
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { useTranslation } from 'react-i18next';
+import { useKindeAuth } from '@kinde-oss/kinde-auth-react';
+import UserProfile from '../UserProfile';
 
 function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
 
     const [t, _] = useTranslation()
+
+    const { login, isAuthenticated } = useKindeAuth()
 
     const handleRemove = (idx) => {
         removeFromCard(idx);
@@ -37,6 +40,10 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
         }
     };
 
+    const handleBook = () => {
+        alert("Congratulations for you're request has been booked")
+    }
+
     return (
         <div className="card">
             <h2 className="cart-title"> {t("Cart")} </h2>
@@ -55,16 +62,23 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
                                 </div>
                                 <div className='buttons'>
                                     <button onClick={() => handleRemove(index)}>Remove</button>
-                                    <button>
-                                        <Link to="/login" className='list-style'>Book</Link>
-                                    </button>
+                                    {
+                                        isAuthenticated ? (
+                                            <button onClick={handleBook} className='list-style'>Book</button>
+                                        ) :
+                                            (
+                                                <button onClick={login} className='list-style'>Book</button>
+
+                                            )
+                                    }
                                 </div>
                             </div>
+
                         </div>
                     ))
                 }
             </div>
-        </div>
+        </div >
     );
 }
 
