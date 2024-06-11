@@ -1,45 +1,57 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #343a40;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 ul.layout {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    padding: 10px 20px;
-    margin: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 ul.layout li {
     margin: 0 15px;
 }
 
-ul.layout li a {
-    color: #fff;
+ul.layout li a,
+.link {
+    color: #ffffff;
     text-decoration: none;
     font-size: 16px;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
     display: flex;
     align-items: center;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
-ul.layout li a:hover {
+ul.layout li a:hover,
+.link:hover {
     color: #ff9800;
+    background-color: #495057;
 }
 
-ul.layout li a svg {
-    margin-right: 5px;
+ul.layout li a svg,
+.link svg {
+    margin-right: 8px;
     font-size: 20px;
 }
 
@@ -47,14 +59,21 @@ ul.layout li:last-child {
     margin-left: auto;
 }
 
-ul.layout li a:hover svg {
+ul.layout li a:hover svg,
+.link:hover svg {
     color: #ff9800;
 }
 
-.link {
+.toggle-language {
+    margin-left: auto;
+}
+
+button.link {
     background: none;
     border: none;
     cursor: pointer;
     font: inherit;
-    color: white;
+    color: inherit;
+    display: flex;
+    align-items: center;
 }

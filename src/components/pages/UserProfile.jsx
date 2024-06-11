@@ -1,6 +1,7 @@
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import './css/UserProfile.css';
 import { FaRegUserCircle } from "react-icons/fa";
+import { TfiEmail } from "react-icons/tfi";
 
 
 const UserProfile = () => {
@@ -14,10 +15,16 @@ const UserProfile = () => {
         isAuthenticated && (
             <div className="user-profile">
                 <div className="circle">
-                    <FaRegUserCircle size={40} />
+                    <FaRegUserCircle className="coloring" size={40} />
                     <div className="dropdown">
-                        <p>{user.family_name}</p>
-                        <p>{user.email}</p>
+                        <p>
+                            {user.family_name}
+                        </p>
+                        <p>
+                            <TfiEmail />
+
+                            {user.email}
+                        </p>
                     </div>
                 </div>
             </div>

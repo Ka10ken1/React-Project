@@ -3,7 +3,7 @@
     align-items: center;
 }
 
-.languages button {
+.languages select {
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -12,27 +12,11 @@
     color: #333;
     outline: none;
     cursor: pointer;
+    margin-left: 8px;
     transition: border-color 0.3s, background-color 0.3s, color 0.3s;
 }
 
-.languages button:hover,
-.languages button:focus {
+.languages select:hover,
+.languages select:focus {
     border-color: #666;
-}
-
-.languages button::after {
-    content: '';
-    display: inline-block;
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-    border-left: 5px solid #666;
-    margin-left: 5px;
-    transition: transform 0.3s;
-}
-
-.languages button:hover::after,
-.languages button:focus::after {
-    transform: rotate(90deg);
 }

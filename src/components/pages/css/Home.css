@@ -1,57 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+}
+
 .home {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .welcome-container {
     text-align: center;
-    padding: 80px 0;
-    background-color: #f9f9f9;
+    padding: 80px 20px;
+    background-color: #fff;
     border-radius: 15px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    max-width: 800px;
+    width: 100%;
 }
 
 .title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     color: #333;
 }
 
 .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 2rem;
     color: #666;
 }
 
 .btn {
-    background-color: #4CAF50;
+    background-color: #007bff;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 30px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin-bottom: 2rem;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
 .info {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .info-item {
-    margin: 0 2rem;
+    margin: 0 20px;
     color: #555;
     font-size: 1rem;
+    text-align: center;
 }
 
 .info-item i {
@@ -65,19 +84,19 @@
 
 .features {
     text-align: center;
-    margin: 50px auto;
+    margin: 50px 20px;
     padding: 40px;
-    background-color: #f5f5f5;
+    background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    width: 100%;
 }
 
 .features h2 {
-    font-size: 1rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .feature {
@@ -99,7 +118,7 @@
 .feature i {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #4CAF50;
+    color: #007bff;
 }
 
 .feature h3 {
@@ -117,11 +136,14 @@
 .testimonial {
     text-align: center;
     margin: 50px auto;
+    max-width: 800px;
+    width: 100%;
 }
 
 .testimonial h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: #333;
 }
 
 .quote {
@@ -135,50 +157,23 @@
 .quote p {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-}
-
-.quote p:last-child {
-    font-style: italic;
-}
-
-.celebrity-visits {
-    text-align: center;
-    margin: 50px auto;
-}
-
-.celebrity-visits h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
-}
-
-.visit {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.celebrity-image {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-.visit p {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
     color: #555;
 }
 
-.visit p:last-child {
+.quote p:last-child {
     font-style: italic;
     color: #888;
 }
 
 .footer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }

@@ -1,20 +1,23 @@
 import React from "react";
 import Slideshow from "./home/Slideshow";
 import "./css/Home.css";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import UserProfile from "./UserProfile";
 
 function Home() {
+
+    const { t, _ } = useTranslation();
+
     return (
         <div className="home">
             <div className="welcome-container">
-                <h1 className="title">Welcome to Our Hotel</h1>
-                <p className="subtitle">Experience luxury, comfort, and impeccable service.</p>
-                <Link className="btn" to="/booking">Book Now</Link>
+                <h1 className="title">{t("Welcome to Our Hotel")}</h1>
+                <p className="subtitle">{t("Experience luxury, comfort, and impeccable service")}.</p>
+                <Link className="btn" to="/booking">{t("Book Now")}</Link>
                 <div className="info">
                     <div className="info-item">
                         <i className="fas fa-map-marker-alt"></i>
-                        <p>123 Main Street, City, Country</p>
+                        <p>123 {t("Main Street")}, {t("City")}, {t("Country")}</p>
                     </div>
                     <div className="info-item">
                         <i className="fas fa-phone-alt"></i>
@@ -28,7 +31,7 @@ function Home() {
             </div>
             <Slideshow />
             <div className="features">
-                <h2>Our Features</h2>
+                <h2>{t("Features")}</h2>
                 <div className="feature">
                     <i className="fas fa-utensils"></i>
                     <h3>Restaurant</h3>
@@ -57,23 +60,7 @@ function Home() {
                         <p>- Jane Smith</p>
                     </div>
                 </div>
-                <div className="celebrity-visits">
-                    <h2>Honorary Celebrity Visits</h2>
-                    <div className="visit">
-                        <img src="/celebrity1.jpg" alt="Celebrity 1" className="celebrity-image" />
-                        <p>"Had an amazing time at this hotel! The hospitality was top-notch."</p>
-                        <p>Honny Deph</p>
-                    </div>
-                    <div className="visit">
-                        <img src="/celebrity2.jpg" alt="Celebrity 2" className="celebrity-image" />
-                        <p>"A beautiful place to relax and unwind. Highly recommend!"</p>
-                        <p>- Celebrity Name 2</p>
-                    </div>
-                </div>
-
-                <UserProfile />
             </div>
-
         </div>
     );
 }

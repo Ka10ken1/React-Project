@@ -1,8 +1,13 @@
 .user-profile {
     position: fixed;
-    top: 70px;
+    top: 5px;
     right: 10px;
 }
+
+.coloring:hover {
+    color: #ff9800;
+}
+
 
 .circle {
     width: 50px;
@@ -13,6 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
     background-size: cover;
     background-position: center;
 }
@@ -39,6 +45,9 @@
     border-radius: 5px;
     padding: 8px;
     font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .dropdown p:first-child {

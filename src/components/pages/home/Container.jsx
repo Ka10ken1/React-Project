@@ -5,7 +5,6 @@ import SearchInput from "./Search";
 import Filter from "./Filter";
 import "./css/Container.css";
 import HotelData from "./data/images";
-import UserProfile from "../UserProfile";
 
 
 const images = HotelData;
@@ -49,13 +48,15 @@ function Container() {
         <div className="container">
             <div className="header">
                 <SearchInput onSearch={handleSearch} />
-                {selectedBoxes.length !== 0 && (
-                    <Card
-                        selectedBoxes={selectedBoxes}
-                        removeFromCard={handleRemoveFromCard}
-                        setSelectedBoxes={setSelectedBoxes}
-                    />
-                )}
+                {
+                    selectedBoxes.length !== 0 && (
+                        <Card
+                            selectedBoxes={selectedBoxes}
+                            removeFromCard={handleRemoveFromCard}
+                            setSelectedBoxes={setSelectedBoxes}
+                        />
+                    )
+                }
             </div>
 
             <div className="box-container">
@@ -71,12 +72,12 @@ function Container() {
                             description={image.description}
                             onAddToCard={handleAddToCard}
                             price={image.price}
+                            roomId={image.roomId}
                         />
                     ))}
                 </div>
             </div>
 
-            <UserProfile />
         </div>
     );
 }

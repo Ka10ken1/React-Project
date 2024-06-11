@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import "./language.css"
+import "./language.css";
 import { MdLanguage } from "react-icons/md";
-
 
 const ToggleLanguage = () => {
     const { _, i18n } = useTranslation();
@@ -14,18 +13,19 @@ const ToggleLanguage = () => {
         });
     };
 
-    const toggleLanguage = () => {
-        const newLang = lang === 'en' ? 'ge' : 'en';
+    const handleSelectChange = (event) => {
+        const newLang = event.target.value;
         setLang(newLang);
         changeLanguage(newLang);
     };
 
     return (
         <div className='languages'>
-            <button onClick={toggleLanguage}>
-                <MdLanguage />
-                {lang}
-            </button>
+            <MdLanguage />
+            <select value={lang} onChange={handleSelectChange} className='language-select'>
+                <option value="en" style={{ fontFamily: "cursive" }}>en</option>
+                <option value="ge">ge</option>
+            </select>
         </div>
     );
 };
