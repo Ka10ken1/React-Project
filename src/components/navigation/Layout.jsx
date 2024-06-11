@@ -5,9 +5,12 @@ import { useTranslation } from "react-i18next";
 import { FaSearch } from "react-icons/fa";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineLogin } from "react-icons/md";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 
 
 function Layout() {
+
+    const { login } = useKindeAuth();
 
     const [t, _] = useTranslation();
 
@@ -27,13 +30,10 @@ function Layout() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/login" className="link">
+                    <button onClick={login} className="link">
                         <MdOutlineLogin />
                         {t("Login")}
-                    </Link>
-                </li>
-                <li>
-                    <Link to="/signup" className="link">{t("SignUp")}</Link>
+                    </button>
                 </li>
                 <li>
                     <ToggleLanguage />

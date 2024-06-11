@@ -50,3 +50,11 @@ ul.layout li:last-child {
 ul.layout li a:hover svg {
     color: #ff9800;
 }
+
+.link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: white;
+}

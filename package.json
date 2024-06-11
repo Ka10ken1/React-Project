@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@kinde-oss/kinde-auth-react": "^4.0.1",
     "@supabase/supabase-js": "^2.43.4",
     "axios": "^1.7.2",
     "dotenv": "^16.4.5",
