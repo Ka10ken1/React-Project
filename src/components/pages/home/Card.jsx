@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useKindeAuth } from '@kinde-oss/kinde-auth-react';
 import BookingInfo from './BookingInfo';
 
+
 function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
 
     const [t, _] = useTranslation()

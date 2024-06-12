@@ -10,7 +10,7 @@ function Home() {
     return (
         <div className="home">
             <div className="welcome-container">
-                <h1 className="title">{t("Welcome to Our Hotel")}</h1>
+                <h1 className="title">{t("Welcome to Luxury Hotel")}</h1>
                 <p className="subtitle">{t("Experience luxury, comfort, and impeccable service")}.</p>
                 <Link className="btn" to="/booking">{t("Book Now")}</Link>
             </div>

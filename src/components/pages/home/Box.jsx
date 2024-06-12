@@ -3,6 +3,7 @@ import "./css/Box.css";
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 import ReactStars from "react-rating-stars-component";
+import { TiShoppingCart } from "react-icons/ti";
 
 
 function Img({ url }) {
@@ -31,7 +32,9 @@ function Box({ url, name, amenities, onAddToCard, price, roomId }) {
                         <li key={index}>{t(amenity)}</li>
                     ))}
                 </ul>
-                <button onClick={() => onAddToCard({ url, name, amenities, price: parseInt(price), nightCount: 1, roomId })}>
+                <button className="Addcart" onClick={() => onAddToCard({ url, name, amenities, price: parseInt(price), nightCount: 1, roomId })}>
+                    <TiShoppingCart />
+
                     {t("Add to Card")}
                 </button>
 

@@ -15,7 +15,7 @@
   "City": "ქალაქი",
   "Country": "ქვეყანა",
   "Main Street": "მთავარი ქუჩა",
-  "Welcome to Our Hotel": "მოგესალმებით ჩვენ სასტუმროში",
+  "Welcome to Luxury Hotel": "მოგესალმებით ჩვენ სასტუმროში",
   "Experience luxury, comfort, and impeccable service": "დაისვენე კომფორტსა და შეუდარებელ მომსახურებაში",
   "Features": "მომსახურებაში შედის",
   "Book Now": "დაჯავშნა",
@@ -32,5 +32,8 @@
   "Spa": "სპა",
   "Price Range": "ფასი",
   "Remove": "ამოშლა",
-  "Book": "დაჯავშნა"
+  "Book": "დაჯავშნა",
+  "Room Service": "მომსახურება",
+  "Free Restaurant": "უფასო რესტორანი",
+  "Beach Access": "სანაპიროს ხედი"
 }
