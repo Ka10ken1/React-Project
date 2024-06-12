@@ -5,7 +5,7 @@ import { TfiEmail } from "react-icons/tfi";
 import { useState } from "react";
 
 const UserProfile = () => {
-    const { user, isAuthenticated, isLoading } = useKindeAuth();
+    const { user, isAuthenticated, isLoading, logout } = useKindeAuth();
     const [isDropdownVisible, setDropdownVisible] = useState(false);
 
     if (isLoading) {
@@ -17,21 +17,35 @@ const UserProfile = () => {
             <div className="user-profile">
                 <div
                     className="user-icon"
-                    onClick={() => setDropdownVisible(!isDropdownVisible)}
-                    onMouseEnter={() => setDropdownVisible(true)}
-                    onMouseLeave={() => setDropdownVisible(false)}
+                    onClick={() => {
+                        setDropdownVisible(!isDropdownVisible)
+                    }}
                 >
-                    <FaRegUserCircle className="icon" size={40} />
+                    <FaRegUserCircle className="icon" size={60} />
                 </div>
                 {isDropdownVisible && (
                     <div className="dropdown-menu">
-                        <div className="dropdown-item">
-                            <FaRegUserCircle className="dropdown-icon" />
-                            <span>{user.family_name}</span>
+                        <div className="profile-header">
+                            {user.picture ? (
+                                <img src={user.picture} alt="Profile" className="profile-picture" />
+                            ) : (
+                                <FaRegUserCircle className="profile-icon" size={60} />
+                            )}
+                            <div className="profile-name">
+                                <span>{user.given_name} {user.family_name}</span>
+                            </div>
                         </div>
-                        <div className="dropdown-item">
-                            <TfiEmail className="dropdown-icon" />
-                            <span>{user.email}</span>
+                        <div className="profile-info">
+                            <div className="dropdown-item">
+                                <TfiEmail className="dropdown-icon" />
+                                <span>{user.email}</span>
+                            </div>
+                            <div className="dropdown-item">
+                                <span>{user.nickname}</span>
+                            </div>
+                            <div className="dropdown-item logout-button" onClick={logout}>
+                                <span>Logout</span>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -41,4 +55,3 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
-
