@@ -52,6 +52,7 @@
 .controls {
     display: flex;
     justify-content: space-between;
+    gap: 10px;
     align-items: center;
     margin: 15px 0;
 }
@@ -73,7 +74,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    gap: 10px;
 }
+
 
 .buttons button {
     background-color: #4CAF50;

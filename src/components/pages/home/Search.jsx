@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./css/Search.css"
+import { useTranslation } from "react-i18next";
 
 function SearchInput({ onSearch }) {
     const [searchTerm, setSearchTerm] = useState('');
+    const [t, _] = useTranslation()
 
     const handleInputChange = (e) => {
         const value = e.target.value;
@@ -15,7 +17,7 @@ function SearchInput({ onSearch }) {
             <input
                 className="search"
                 type="text"
-                placeholder="Search..."
+                placeholder={`${t("Search")}...`}
                 value={searchTerm}
                 onChange={handleInputChange}
             />

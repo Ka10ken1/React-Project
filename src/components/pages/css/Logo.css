@@ -1,0 +1,8 @@
+.logo {
+    height: 40px;
+    /* Adjust as needed for your design */
+    width: auto;
+    /* Maintain aspect ratio */
+    border-radius: 10px;
+    background-color: white;
+}

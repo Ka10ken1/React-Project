@@ -6,7 +6,6 @@ import Filter from "./Filter";
 import "./css/Container.css";
 import HotelData from "./data/images";
 
-
 const images = HotelData;
 
 function Container() {
@@ -33,15 +32,16 @@ function Container() {
     };
 
     const applyFilters = (image) => {
-        const matchesFilters = filters.filters.length === 0 || filters.filters.some(filter => image.description.toLowerCase().includes(filter.toLowerCase()));
+        const matchesFilters = filters.filters.length === 0 || filters.filters.some(filter => image.name.toLowerCase().includes(filter.toLowerCase()) || image.amenities.some(amenity => amenity.toLowerCase().includes(filter.toLowerCase())));
         const matchesPrice = image.price <= filters.priceRange;
         return matchesFilters && matchesPrice;
     };
 
     const filteredImages = images.filter(image =>
         image.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        image.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        image.price.toString().includes(searchTerm)
+        image.amenities.some(amenity => amenity.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        image.price.toString().includes(searchTerm) ||
+        image.roomId.toString().includes(searchTerm)
     ).filter(applyFilters);
 
     return (
@@ -69,7 +69,7 @@ function Container() {
                             key={index}
                             url={image.url}
                             name={image.name}
-                            description={image.description}
+                            amenities={image.amenities}
                             onAddToCard={handleAddToCard}
                             price={image.price}
                             roomId={image.roomId}

@@ -61,19 +61,18 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
                             <div key={index} className="box">
                                 <img src={box.url} alt={box.name} />
                                 <div>
-                                    <h2>Room:{box.roomId}</h2>
-                                    <h3>{box.name}</h3>
-                                    <p>Night Count: {box.nightCount}</p>
+                                    <h2>{t("Room")}:{box.roomId}</h2>
+                                    <p>{t("Night Count")}: {box.nightCount}</p>
                                     <div className='controls'>
                                         <button onClick={() => handleDecrementDays(index)}><CiCircleMinus /></button>
-                                        <p>Price:<LuBadgeDollarSign />{selectedBoxes[index].totalPrice}</p>
+                                        <p><LuBadgeDollarSign />{selectedBoxes[index].totalPrice}</p>
                                         <button onClick={() => handleIncrementDays(index)}><CiCirclePlus /></button>
                                     </div>
                                     <div className='buttons'>
-                                        <button onClick={() => handleRemove(index)}>Remove</button>
+                                        <button onClick={() => handleRemove(index)}>{t("Remove")}</button>
                                         {
                                             isAuthenticated ? (
-                                                <button onClick={() => handleBook(box.roomId)} className='list-style'>Book</button>
+                                                <button onClick={() => handleBook(box.roomId)} className='list-style'>{t("Book")}</button>
                                             ) :
                                                 (
                                                     <button onClick={login} className='list-style'>Book</button>

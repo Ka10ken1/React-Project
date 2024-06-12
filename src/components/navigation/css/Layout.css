@@ -7,6 +7,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
+    margin-top: 60px;
 }
 
 .navbar {
@@ -15,12 +16,29 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: space-between;
+    /* Space out items horizontally */
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    /* Adjust margin as needed */
 }
 
 ul.layout {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -28,7 +46,8 @@ ul.layout {
 }
 
 ul.layout li {
-    margin: 0 15px;
+    margin: 0 20px;
+    /* Increase margin to add more space between items */
 }
 
 ul.layout li a,

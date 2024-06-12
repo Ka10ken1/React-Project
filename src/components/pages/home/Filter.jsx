@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./css/Filter.css";
+import { useTranslation } from "react-i18next";
 
 function Filter({ onFilterChange }) {
     const [activeFilters, setActiveFilters] = useState([]);
     const [priceRange, setPriceRange] = useState(500);
+
+    const [t, _] = useTranslation();
 
     const handleCheckboxChange = (filter) => {
         let updatedFilters;
@@ -30,7 +33,7 @@ function Filter({ onFilterChange }) {
 
     return (
         <div className="filter">
-            <label htmlFor="filter">Filter:</label>
+            <label htmlFor="filter">{t("Filter")}</label>
             <div className="checkboxes">
                 <label>
                     <input
@@ -38,7 +41,7 @@ function Filter({ onFilterChange }) {
                         value="Restaurant"
                         onChange={() => handleCheckboxChange("Restaurant")}
                     />
-                    Restaurant
+                    {t("Restaurant")}
                 </label>
                 <label>
                     <input
@@ -46,7 +49,7 @@ function Filter({ onFilterChange }) {
                         value="Swimming Pool"
                         onChange={() => handleCheckboxChange("Swimming Pool")}
                     />
-                    Swimming Pool
+                    {t("Swimming Pool")}
                 </label>
                 <label>
                     <input
@@ -54,11 +57,11 @@ function Filter({ onFilterChange }) {
                         value="Spa"
                         onChange={() => handleCheckboxChange("Spa")}
                     />
-                    Spa
+                    {t("Spa")}
                 </label>
             </div>
             <div className="price-filter">
-                <label htmlFor="price">Price Range: ${priceRange}</label>
+                <label htmlFor="price">{t("Price Range")}: ${priceRange}</label>
                 <input
                     type="range"
                     id="price"

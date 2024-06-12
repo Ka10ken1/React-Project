@@ -3,9 +3,10 @@ import "./css/Layout.css";
 import ToggleLanguage from "../languages/ToggleLanguage";
 import { useTranslation } from "react-i18next";
 import { FaSearch, FaHome } from "react-icons/fa";
-import { MdOutlineLogin } from "react-icons/md";
+import { MdOutlineLogin, MdOutlineImportContacts } from "react-icons/md";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import UserProfile from "../pages/UserProfile";
+import Logo from "../pages/Logo";
 
 function Layout() {
     const { login, isAuthenticated } = useKindeAuth();
@@ -14,6 +15,9 @@ function Layout() {
     return (
         <>
             <nav className="navbar">
+                <Link to="/" className="navbar-logo">
+                    <Logo />
+                </Link>
                 <ul className="layout">
                     <li>
                         <Link to="/" className="link">
@@ -25,6 +29,12 @@ function Layout() {
                         <Link to="/booking" className="link">
                             <FaSearch />
                             {t("Booking")}
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/contact" className="link">
+                            <MdOutlineImportContacts />
+                            {t("Contact")}
                         </Link>
                     </li>
                     <li>
@@ -40,11 +50,8 @@ function Layout() {
                     </li>
                 </ul>
                 <UserProfile />
-
             </nav>
             <Outlet />
-
-
         </>
     );
 }

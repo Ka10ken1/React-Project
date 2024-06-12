@@ -21,9 +21,9 @@ const ToggleLanguage = () => {
 
     return (
         <div className='languages'>
-            <MdLanguage />
+            <MdLanguage size={30} />
             <select value={lang} onChange={handleSelectChange} className='language-select'>
-                <option value="en" style={{ fontFamily: "cursive" }}>en</option>
+                <option value="en" style={{ fontFamily: "cursive", fontSize: "20" }}>en</option>
                 <option value="ge">ge</option>
             </select>
         </div>

@@ -1,6 +1,6 @@
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import './css/UserProfile.css';
-import { FaRegUserCircle } from "react-icons/fa";
+import { FaRegUserCircle, FaUser } from "react-icons/fa";
 import { TfiEmail } from "react-icons/tfi";
 import { useState } from "react";
 
@@ -21,7 +21,7 @@ const UserProfile = () => {
                         setDropdownVisible(!isDropdownVisible)
                     }}
                 >
-                    <FaRegUserCircle className="icon" size={60} />
+                    <FaUser className="icon" size={60} />
                 </div>
                 {isDropdownVisible && (
                     <div className="dropdown-menu">
