@@ -6,12 +6,12 @@ import Filter from "./Filter";
 import "./css/Container.css";
 import HotelData from "./data/images";
 
-const images = HotelData;
+const data = HotelData;
 
 function Container() {
     const [selectedBoxes, setSelectedBoxes] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [filters, setFilters] = useState({ filters: [], priceRange: 500 });
+    const [filters, setFilters] = useState({ filters: [], priceRange: 500, isAvailable: false });
 
     const handleAddToCard = (box) => {
         setSelectedBoxes([...selectedBoxes, box]);
@@ -31,17 +31,19 @@ function Container() {
         setFilters(updatedFilters);
     };
 
-    const applyFilters = (image) => {
-        const matchesFilters = filters.filters.length === 0 || filters.filters.some(filter => image.name.toLowerCase().includes(filter.toLowerCase()) || image.amenities.some(amenity => amenity.toLowerCase().includes(filter.toLowerCase())));
-        const matchesPrice = image.price <= filters.priceRange;
-        return matchesFilters && matchesPrice;
+    const applyFilters = (data) => {
+        const matchesFilters = filters.filters.length === 0 || filters.filters.some(filter => data.name.toLowerCase().includes(filter.toLowerCase()) || data.amenities.some(amenity => amenity.toLowerCase().includes(filter.toLowerCase())));
+        const matchesPrice = data.price <= filters.priceRange;
+        const matchesAvailability = !filters.isAvailable || data.isAvailable;
+
+        return matchesFilters && matchesPrice && matchesAvailability;
     };
 
-    const filteredImages = images.filter(image =>
-        image.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        image.amenities.some(amenity => amenity.toLowerCase().includes(searchTerm.toLowerCase())) ||
-        image.price.toString().includes(searchTerm) ||
-        image.roomId.toString().includes(searchTerm)
+    const filteredImages = data.filter(data =>
+        data.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        data.amenities.some(amenity => amenity.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        data.price.toString().includes(searchTerm) ||
+        data.roomId.toString().includes(searchTerm)
     ).filter(applyFilters);
 
     return (
@@ -73,6 +75,7 @@ function Container() {
                             onAddToCard={handleAddToCard}
                             price={image.price}
                             roomId={image.roomId}
+                            isAvailable={image.isAvailable}
                         />
                     ))}
                 </div>

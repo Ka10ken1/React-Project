@@ -3,6 +3,7 @@ import './App.css';
 import Nav from './components/navigation/Nav';
 import { KindeProvider } from "@kinde-oss/kinde-auth-react";
 
+
 function App() {
 
     return (

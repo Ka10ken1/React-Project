@@ -1,20 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Box.css";
 import { LuBadgeDollarSign } from "react-icons/lu";
 import { useTranslation } from "react-i18next";
 import ReactStars from "react-rating-stars-component";
 import { TiShoppingCart } from "react-icons/ti";
-
+import { AiOutlineCheckCircle, AiOutlineCloseCircle } from "react-icons/ai"; // Import tick and cross icons
 
 function Img({ url }) {
     return <img src={url} alt="Hotel" />;
 }
 
-function Box({ url, name, amenities, onAddToCard, price, roomId }) {
+function Box({ url, name, amenities, onAddToCard, price, roomId, isAvailable }) {
     const [t, _] = useTranslation();
 
     const ratingChanged = (newRating) => {
-        // console.log(newRating);
     };
 
     return (
@@ -34,7 +33,6 @@ function Box({ url, name, amenities, onAddToCard, price, roomId }) {
                 </ul>
                 <button className="Addcart" onClick={() => onAddToCard({ url, name, amenities, price: parseInt(price), nightCount: 1, roomId })}>
                     <TiShoppingCart />
-
                     {t("Add to Card")}
                 </button>
 
@@ -45,6 +43,17 @@ function Box({ url, name, amenities, onAddToCard, price, roomId }) {
                     activeColor="#ffd700"
                 />
 
+                <div className="availability">
+                    {isAvailable ? (
+                        <span className="available">
+                            <AiOutlineCheckCircle /> {t("Available")}
+                        </span>
+                    ) : (
+                        <span className="not-available">
+                            <AiOutlineCloseCircle /> {t("Not Available")}
+                        </span>
+                    )}
+                </div>
             </div>
         </div>
     );

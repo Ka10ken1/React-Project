@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 function Filter({ onFilterChange }) {
     const [activeFilters, setActiveFilters] = useState([]);
     const [priceRange, setPriceRange] = useState(500);
+    const [isAvailable, setIsAvailable] = useState(false);
 
     const [t, _] = useTranslation();
 
@@ -18,7 +19,8 @@ function Filter({ onFilterChange }) {
         setActiveFilters(updatedFilters);
         onFilterChange({
             filters: updatedFilters,
-            priceRange: priceRange
+            priceRange: priceRange,
+            isAvailable: isAvailable
         });
     };
 
@@ -27,15 +29,25 @@ function Filter({ onFilterChange }) {
         setPriceRange(value);
         onFilterChange({
             filters: activeFilters,
-            priceRange: value
+            priceRange: value,
+            isAvailable: isAvailable
+        });
+    };
+
+    const handleAvailableChange = () => {
+        setIsAvailable(!isAvailable);
+        onFilterChange({
+            filters: activeFilters,
+            priceRange: priceRange,
+            isAvailable: !isAvailable
         });
     };
 
     return (
         <div className="filter">
-            <label htmlFor="filter">{t("Filter")}</label>
+            <h3 className="filter-title">{t("Filter")}</h3>
             <div className="checkboxes">
-                <label>
+                <label className="checkbox-label">
                     <input
                         type="checkbox"
                         value="Restaurant"
@@ -43,7 +55,7 @@ function Filter({ onFilterChange }) {
                     />
                     {t("Restaurant")}
                 </label>
-                <label>
+                <label className="checkbox-label">
                     <input
                         type="checkbox"
                         value="Swimming Pool"
@@ -51,7 +63,7 @@ function Filter({ onFilterChange }) {
                     />
                     {t("Swimming Pool")}
                 </label>
-                <label>
+                <label className="checkbox-label">
                     <input
                         type="checkbox"
                         value="Spa"
@@ -59,9 +71,26 @@ function Filter({ onFilterChange }) {
                     />
                     {t("Spa")}
                 </label>
+                <label className="checkbox-label">
+                    <input
+                        type="checkbox"
+                        value="Water Sports"
+                        onChange={() => handleCheckboxChange("Water Sports")}
+                    />
+                    {t("Water Sports")}
+                </label>
+
+                <label className="checkbox-label">
+                    <input
+                        type="checkbox"
+                        value="Available"
+                        onChange={handleAvailableChange}
+                    />
+                    {t("Available")}
+                </label>
             </div>
             <div className="price-filter">
-                <label htmlFor="price">{t("Price Range")}: ${priceRange}</label>
+                <label className="price-label" htmlFor="price">{t("Price Range")}: ${priceRange}</label>
                 <input
                     type="range"
                     id="price"
@@ -70,6 +99,7 @@ function Filter({ onFilterChange }) {
                     max="500"
                     value={priceRange}
                     onChange={handlePriceChange}
+                    className="price-slider"
                 />
             </div>
         </div>

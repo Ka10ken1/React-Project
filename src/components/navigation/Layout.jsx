@@ -7,10 +7,16 @@ import { MdOutlineLogin, MdOutlineImportContacts } from "react-icons/md";
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import UserProfile from "../pages/UserProfile";
 import Logo from "../pages/Logo";
+import { useState } from "react";
 
 function Layout() {
     const { login, isAuthenticated } = useKindeAuth();
     const [t, _] = useTranslation();
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setDropdownOpen(!dropdownOpen);
+    };
 
     return (
         <>
@@ -31,11 +37,25 @@ function Layout() {
                             {t("Booking")}
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/contact" className="link">
+                    <li className="dropdown">
+                        <div className="link dropdown-toggle" onClick={toggleDropdown}>
                             <MdOutlineImportContacts />
                             {t("Contact")}
-                        </Link>
+                        </div>
+                        {dropdownOpen && (
+                            <ul className="dropdown-menu">
+                                <li>
+                                    <Link to="/contact" className="link">
+                                        {t("Contact Us")}
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/contact" className="link">
+                                        {t("About Us")}
+                                    </Link>
+                                </li>
+                            </ul>
+                        )}
                     </li>
                     <li>
                         {!isAuthenticated && (

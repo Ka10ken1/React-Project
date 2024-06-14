@@ -60,3 +60,27 @@
     display: flex;
     gap: 10px;
 }
+
+
+.box .availability {
+    margin-top: 10px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.box .availability .available {
+    color: green;
+    display: flex;
+    align-items: center;
+}
+
+.box .availability .not-available {
+    color: red;
+    display: flex;
+    align-items: center;
+}
+
+.box .availability span {
+    margin-left: 5px;
+}
