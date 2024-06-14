@@ -38,24 +38,10 @@ function Layout() {
                         </Link>
                     </li>
                     <li className="dropdown">
-                        <div className="link dropdown-toggle" onClick={toggleDropdown}>
+                        <Link to="/contact" className="link dropdown-toggle">
                             <MdOutlineImportContacts />
                             {t("Contact")}
-                        </div>
-                        {dropdownOpen && (
-                            <ul className="dropdown-menu">
-                                <li>
-                                    <Link to="/contact" className="link">
-                                        {t("Contact Us")}
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/contact" className="link">
-                                        {t("About Us")}
-                                    </Link>
-                                </li>
-                            </ul>
-                        )}
+                        </Link>
                     </li>
                     <li>
                         {!isAuthenticated && (
