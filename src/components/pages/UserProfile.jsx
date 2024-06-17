@@ -18,10 +18,10 @@ const UserProfile = () => {
                 <div
                     className="user-icon"
                     onClick={() => {
-                        setDropdownVisible(!isDropdownVisible)
+                        setDropdownVisible(!isDropdownVisible);
                     }}
                 >
-                    <FaUser className="icon" size={60} />
+                    <FaUser className="icon" size={30} />
                 </div>
                 {isDropdownVisible && (
                     <div className="dropdown-menu">
@@ -55,3 +55,4 @@ const UserProfile = () => {
 };
 
 export default UserProfile;
+

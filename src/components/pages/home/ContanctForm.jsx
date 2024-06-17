@@ -12,10 +12,9 @@ const ContactForm = () => {
             <div className="about-us">
                 <h2>{t("About Us")}</h2>
                 <p>
-                    Welcome to our company! We are dedicated to providing the best service
-                    in the industry. Our team is passionate, skilled, and ready to assist
-                    you with any inquiries you may have. Our mission is to ensure customer
-                    satisfaction through excellence and innovation.
+                    {
+                        t("Welcome to our company! We are dedicated to providing the best service in the industry. Our team is passionate, skilled, and ready to assist you with any inquiries you may have. Our mission is to ensure customer satisfaction through excellence and innovation.")
+                    }
                 </p>
             </div>
 
