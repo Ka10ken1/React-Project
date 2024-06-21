@@ -53,7 +53,7 @@ function Card({ selectedBoxes, removeFromCard, setSelectedBoxes }) {
     };
 
     return (
-        <div>
+        <div className='card-container'>
             <div className='card'>
                 <h2 className="cart-title"> {t("Cart")} </h2>
                 <div className='flexing'>

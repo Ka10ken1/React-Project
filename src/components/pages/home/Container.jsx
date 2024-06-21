@@ -72,7 +72,7 @@ function Container() {
             </div>
 
             <div className="box-container">
-                <div>
+                <div className="">
                     <div className="filter-column">
                         <Filter onFilterChange={handleFilterChange} />
                     </div>
