@@ -3,7 +3,7 @@ const HotelData = [
         url: '/regular-nice.png',
         name: 'Hotel Blue Horizon',
         amenities: ['Room Service', 'Free Restaurant', 'Spa'],
-        price: 50,
+        price: 250,
         roomId: "001",
         isAvailable: true
     },
@@ -51,7 +51,7 @@ const HotelData = [
         url: '/regular-nice.png',
         name: 'Sunset Vista',
         amenities: ['Hilltop Views', 'Sunsets', 'Serene Atmosphere'],
-        price: 50,
+        price: 200,
         roomId: "007",
         isAvailable: true
     },
@@ -91,7 +91,7 @@ const HotelData = [
         url: '/regular-white.jpg',
         name: 'Eco Retreat',
         amenities: ['Eco-Friendly', 'Nature Surroundings', 'Sustainable Practices', 'Indoor Swimming Pool'],
-        price: 100,
+        price: 300,
         roomId: "012",
         isAvailable: true
     },
@@ -107,7 +107,7 @@ const HotelData = [
         url: '/noice.png',
         name: 'Serenity Cove',
         amenities: ['Secluded Cove', 'Peaceful Retreat', 'Recharge'],
-        price: 150,
+        price: 500,
         roomId: "014",
         isAvailable: true
     }

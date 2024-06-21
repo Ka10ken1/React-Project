@@ -1,7 +1,7 @@
 import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
 import './css/UserProfile.css';
-import { FaRegUserCircle, FaUser } from "react-icons/fa";
-import { TfiEmail } from "react-icons/tfi";
+import { FaUser } from "react-icons/fa";
+import { HiOutlineMailOpen } from "react-icons/hi";
 import { useState } from "react";
 
 const UserProfile = () => {
@@ -11,6 +11,8 @@ const UserProfile = () => {
     if (isLoading) {
         return <p>Loading...</p>;
     }
+
+    console.log('User data:', user);
 
     return (
         isAuthenticated && (
@@ -26,18 +28,14 @@ const UserProfile = () => {
                 {isDropdownVisible && (
                     <div className="dropdown-menu">
                         <div className="profile-header">
-                            {user.picture ? (
-                                <img src={user.picture} alt="Profile" className="profile-picture" />
-                            ) : (
-                                <FaRegUserCircle className="profile-icon" size={60} />
-                            )}
+                            <img src="/profile.png" alt="Profile" className="profile-picture" />
                             <div className="profile-name">
                                 <span>{user.given_name} {user.family_name}</span>
                             </div>
                         </div>
                         <div className="profile-info">
                             <div className="dropdown-item">
-                                <TfiEmail className="dropdown-icon" />
+                                <HiOutlineMailOpen className="dropdown-icon" />
                                 <span>{user.email}</span>
                             </div>
                             <div className="dropdown-item">

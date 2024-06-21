@@ -91,11 +91,11 @@
 
 .logout-button {
     cursor: pointer;
-    color: #d9534f;
+    color: red;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .logout-button:hover {
-    color: #c9302c;
+    color: darkred;
 }
