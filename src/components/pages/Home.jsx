@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function Home() {
-    const { t, _ } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className="home">
@@ -52,5 +52,4 @@ function Home() {
 }
 
 export default Home;
-
 

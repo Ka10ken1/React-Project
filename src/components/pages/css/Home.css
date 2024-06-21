@@ -14,30 +14,32 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .welcome-container {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
-    margin-right: 60px;
 }
 
 .title {
     font-size: 3rem;
     margin-bottom: 1rem;
     color: #333;
+    font-weight: bold;
 }
 
 .subtitle {
     font-size: 1.5rem;
     margin-bottom: 2rem;
     color: #666;
+    line-height: 1.5;
 }
 
 .btn {
@@ -50,7 +52,7 @@ body {
     display: inline-block;
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    border-radius: 5px;
+    border-radius: 50px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -59,38 +61,14 @@ body {
     transform: translateY(-3px);
 }
 
-.info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.info-item {
-    margin: 0 20px;
-    color: #555;
-    font-size: 1rem;
-    text-align: center;
-}
-
-.info-item i {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
-.info-item p {
-    margin: 0;
-}
-
 .features {
     text-align: center;
     margin: 50px 20px;
     padding: 40px;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
     width: 100%;
 }
 
@@ -98,6 +76,7 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
+    font-weight: bold;
 }
 
 .feature {
@@ -107,7 +86,7 @@ body {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -126,6 +105,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 1rem;
     color: #333;
+    font-weight: bold;
 }
 
 .feature p {
@@ -137,7 +117,7 @@ body {
 .testimonial {
     text-align: center;
     margin: 50px auto;
-    max-width: 800px;
+    max-width: 900px;
     width: 100%;
 }
 
@@ -145,13 +125,14 @@ body {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     color: #333;
+    font-weight: bold;
 }
 
 .quote {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
 }
 
@@ -159,6 +140,7 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     color: #555;
+    line-height: 1.5;
 }
 
 .quote p:last-child {
@@ -177,4 +159,5 @@ body {
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    margin-top: 50px;
 }
